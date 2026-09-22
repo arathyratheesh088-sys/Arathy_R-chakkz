@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: SlateGrey;
+            color: White;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .nav-container {
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            background-color: Teal;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: DarkCyan;
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: White;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Main container card matching the rest of the site */
+        .gallery-card {
+            background-color: LightSlateGrey;
+            border-radius: 15px;
+            padding: 35px;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            color: LightCyan;
+            margin-bottom: 25px;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        /* Modern CSS Grid instead of a heavy HTML table */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background-color: SlateGrey;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Subtle hover effect to make the gallery feel premium */
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px; /* Fixed height ensures a clean, uniform look */
+            object-fit: cover; /* Prevents images from stretching or squishing */
+            display: block;
+        }
+
+        /* Make it look great on mobile devices */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+        <button class="btn"><a href="Website.html">Home</a></button>
+        <button class="btn"><a href="fac.html">Faculty Details</a></button>
+        <button class="btn"><a href="hod.html">HOD</a></button>
+        <button class="btn"><a href="mca-asso.html">MCA Association</a></button>
+        <button class="btn"><a href="gallery.html">Gallery</a></button>
+    </div>
+
+    <!-- Gallery Container -->
+    <div class="gallery-card">
+        <h1>GALLERY</h1>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="image/college.jpg" alt="College"></div>
+            <div class="gallery-item"><img src="image/group3.jpeg" alt="Group 3"></div>
+            <div class="gallery-item"><img src="image/group.jpeg" alt="Group"></div>
+            
+            <div class="gallery-item"><img src="image/group5.jpeg" alt="Group 5"></div>
+            <div class="gallery-item"><img src="image/group2.jpeg" alt="Group 2"></div>
+            <div class="gallery-item"><img src="image/group4.jpeg" alt="Group 4"></div>
+        </div>
+    </div>
+
+</body>
+</html>

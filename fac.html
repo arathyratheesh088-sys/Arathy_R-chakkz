@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOD</title>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    background-color: SlateGrey; 
+    color: White;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.nav-container {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.bttn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    background-color: Teal;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bttn:hover {
+    background-color: DarkCyan;
+}
+
+.bttn a {
+    text-decoration: none;
+    color: White;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card-custom {
+    border-radius: 15px;
+    background-color: LightSlateGrey; 
+    width: 80%;
+    max-width: 800px;
+    padding: 30px;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center; 
+    color: LightCyan; 
+    margin-bottom: 25px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: White;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background-color: Teal;
+    color: White;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+td {
+    color: DarkSlateGray;
+    border-bottom: 1px solid LightGray;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes the button to the right */
+}
+
+.btn {
+    border-radius: 4px;
+    padding: 6px 14px;
+    border: none;
+    background-color: DarkSeaGreen;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: SeaGreen;
+}
+
+.btn a {
+    text-decoration: none;
+    color: White;
+    font-size: 13px;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="nav-container">
+    <button class="bttn"><a href="Website.html">Home</a></button>
+    <button class="bttn"><a href="#fac">Faculty Details</a></button>
+    <button class="bttn"><a href="hod.html">HOD</a></button>
+    <button class="bttn"><a href="mca-asso.html">MCA Association</a></button>
+    <button class="bttn"><a href="gallery.html">Gallery</a></button>
+</div>
+
+<!-- Faculty Card Content -->
+<div class="card-custom">
+    <h1>FACULTY of MCA</h1>
+    
+    <table>
+        <tr>
+            <th colspan="2" style="text-align: center; background-color: DarkCyan;">FACULTY MEMBERS</th>
+        </tr>
+        <tr>
+            <th>Designation</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>Associate Professor & HoD</td>
+            <td>
+                <div class="cell">
+                    <span>Sreeja.K</span> 
+                    <button class="btn"><a href="hod.html">View</a></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Associate Professor & Class Tutor</td>
+            <td>
+                <div class="cell">
+                    <span>R.Sujitha</span>
+                    <button class="btn"><a href="tr1.html">View</a></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Associate Professor</td>
+            <td>
+                <div class="cell">
+                    <span>Jeeja G.S.</span> 
+                    <button class="btn"><a href="tr3.html">View</a></button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Associate Professor</td>
+            <td>
+                <div class="cell">
+                    <span>Rekha M. Pillai</span> 
+                    <button class="btn"><a href="tr2.html">View</a></button>
+                </div>
+            </td>
+        </tr>
+
+       <tr>
+            <td>Associate Professor</td>
+            <td>
+                <div class="cell">
+                    <span>Adhithya J V</span> 
+                    <button class="btn"><a href="tr4.html">View</a></button>
+                </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Associate Professor</td>
+            <td>
+                <div class="cell">
+                    <span>Subha Ramachandran</span> 
+                    <button class="btn"><a href="tr5.html">View</a></button>
+                </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Associate Professor</td>
+            <td>
+                <div class="cell">
+                    <span>Jayanthi T</span> 
+                    <button class="btn"><a href="tr6.html">View</a></button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Associate Professor</td>
+            <td>
+                <div class="cell">
+                    <span>Dr. SAJITHA A V MCA, PhD.</span> 
+                    <button class="btn"><a href="tr7.html">View</a></button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
