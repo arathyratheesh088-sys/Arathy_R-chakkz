@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Home</title>
+    <style>
+        /* Base Reset & Variables */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b);
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-gradient: linear-gradient(45deg, #06b6d4, #3b82f6);
+            --accent-hover: linear-gradient(45deg, #3b82f6, #06b6d4);
+            --nav-bg: #0f172a;
+            --border-color: #334155;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .navbar-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+        }
+
+        .nav-btn {
+            background: var(--accent-gradient);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+        }
+
+        /* Responsive Mobile Menu Toggle (CSS Only) */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--text-main);
+            border-radius: 2px;
+        }
+
+        /* Main Container & Card */
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card-custom {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Profile Section */
+        .profile-section {
+            text-center: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #06b6d4;
+            box-shadow: 0 4px 20px rgba(6, 182, 212, 0.2);
+        }
+
+        .profile-title {
+            color: var(--text-main);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        .profile-subtitle {
+            color: #06b6d4;
+            font-weight: 500;
+            margin-top: 5px;
+            font-size: 1.1rem;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 30px 0;
+        }
+
+        /* Content Sections */
+        .section-title {
+            color: #06b6d4;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        strong {
+            color: var(--text-main);
+        }
+
+        /* Lists Styles */
+        .custom-list {
+            list-style: none;
+        }
+
+        .list-item {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .list-item strong {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .tech-stack {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--nav-bg);
+            color: var(--text-muted);
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .card-custom {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <!-- Main Section -->
+    <div class="container">
+        <div class="card-custom">
+            
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <!-- IMPORTANT: Put your image in same folder and change name -->
+                <img src="D:\Arathy.R MCA\image\myphoto.jpg" alt="My Photo" class="profile-img">
+                <h1 class="profile-title">ARATHY.R</h1>
+                <p class="profile-subtitle">Web Developer</p>
+            </div>
+            
+            <hr>
+
+            <!-- About Me -->
+            <h2 class="section-title">About Me</h2>
+            <p>
+                Hello! I’m <strong>Arathy.R</strong>, a passionate and dedicated Web Developer specializing in Python Full Stack development. Experienced in building responsive, user-friendly web applications and mentoring students in modern technologies.
+            </p>
+
+            <!-- Career Objective -->
+            <h2 class="section-title">Career Objective</h2>
+            <p>
+                To obtain a challenging position where I can use my skills, improve my knowledge, and grow professionally in the field of web development.
+            </p>
+
+            <!-- Education & Professional Experience -->
+            <h2 class="section-title">Education & Professional Experience</h2>
+            <ul class="custom-list">
+                <li class="list-item">
+                    <strong>B.Sc. Computer Science</strong><br>
+                    <span style="color: var(--text-muted);">Emmanuel College, Vazhichal, Thiruvananthapuram</span>
+                </li>
+                <li class="list-item">
+                    <strong>Certified Python Full Stack Developer (6 Months)</strong><br>
+                    <span style="color: var(--text-muted);">Quest Innovation Solutions, Thiruvananthapuram</span>
+                </li>
+                <li class="list-item">
+                    <strong>Programming Instructor – GTEC Education</strong><br>
+                    <span style="color: var(--text-muted);">Delivering training in Python Full Stack and MERN Stack development, mentoring students in frontend, backend, and database technologies.</span>
+                </li>
+            </ul>
+
+            <!-- Academic & Professional Projects -->
+            <h2 class="section-title">Academic & Professional Projects</h2>
+            <ul class="custom-list">
+                <li class="list-item">
+                    <strong>Fake News Detection System (Mini Project)</strong><br>
+                    <p>Developed a machine learning-based web application that detects whether a news article is real or fake using Python, NLP, and classification algorithms.</p>
+                </li>
+                <li class="list-item">
+                    <strong>Online Food Delivery Application (Major Project)</strong><br>
+                    <p>Built a full-stack web application for ordering food online with user authentication, cart management, and order tracking features.</p>
+                </li>
+                <li class="list-item">
+                    <strong>Event Management System</strong><br>
