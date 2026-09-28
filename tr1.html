@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Faculty Profile</title>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: SlateGrey;
+    color: White;
+    font-family: Arial, sans-serif;
+    padding: 70px 20px 20px 20px; /* Top padding leaves room for the fixed navbar */
+    text-align: center;
+    height: 100vh;
+    overflow: hidden; /* Prevents scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Fixed Navigation Bar at the top */
+.nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: SlateGrey;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.btn {
+    border-radius: 5px;
+    padding: 8px 16px;
+    border: none;
+    background-color: Teal;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: DarkCyan;
+}
+.btn a {
+    text-decoration: none;
+    color: White;
+    font-size: 14px;
+    font-weight: bold;
+}
+/* Moderately increased width */
+.profile-card {
+    background-color: LightSlateGrey;
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 950px; /* Slightly wider than the original 800px */
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns to fit on one screen */
+    gap: 20px;
+}
+.profile-header {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.profile-title {
+    color: LightCyan;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.profile-img {
+    width: 110px; /* Balanced size to prevent scrolling */
+    height: auto;
+    border: 3px solid Teal;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-bottom: 5px;
+}
+.profile-name {
+    color: White;
+    font-size: 24px;
+    font-weight: bold;
+}
+h3 {
+    color: LightCyan;
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+    border-bottom: 2px solid Teal;
+    padding-bottom: 3px;
+}
+.meta-details {
+    font-style: normal;
+    line-height: 1.6;
+    font-size: 14px;
+}
+.meta-details strong {
+    color: LightCyan;
+}
+ul {
+    padding-left: 15px;
+}
+li {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    color: White;
+    list-style-type: square;
+}
+/* Sub-lists under experience items */
+li ul {
+    margin: 3px 0 5px 0;
+}
+li ul li {
+    font-size: 13px;
+    list-style-type: disc;
+    color: LightCyan;
+    margin-bottom: 2px;
+}
+.left-col, .right-col {
+    display: flex;
+    flex-direction: column;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar (Fixed) -->
+<div class="nav-container">
+    <button class="btn"><a href="Website.html">Home</a></button>
+    <button class="btn"><a href="fac.html">Faculty Details</a></button>
+    <button class="btn"><a href="hod.html">HOD</a></button>
+    <button class="btn"><a href="mca-asso.html">MCA Association</a></button>
+    <button class="btn"><a href="gallery.html">Gallery</a></button>
+</div>
+
+<!-- Profile Card Deck -->
+<div class="profile-card">
+    <div class="profile-header">
+        <h2 class="profile-title">Assistant Professor</h2>
+        <img src="image/tr1.png" alt="R.Sujitha" class="profile-img">
+        <div class="profile-name">R.Sujitha</div>
+    </div>
+
+    <!-- Left Column: About & Academic Qualifications -->
+    <div class="left-col">
+        <h3>About</h3>
+        <div class="meta-details">
+            <strong>Designation:</strong> Assistant Professor<br>
+            <strong>Department:</strong> Department of MCA<br>
+            <strong>Phone Number:</strong> 9400883648<br>
+            <strong>Mail-id:</strong> sujithaprasanth1200@gmail.com / sujithaprasanth@gmail.com<br>
+            <strong>KTU-ID:</strong> KTU-F52030
+        </div>
+
+        <h3>Academic Qualifications</h3>
+        <ul>
+            <li><strong>June 2024:</strong> Pursuing PhD from Glocal University, UP.</li>
+            <li><strong>MCA:</strong> SSM College of Engineering, Komarapalayam (Anna University).</li>
+            <li><strong>B.Sc. Physics, Maths, CS:</strong> Nehru Memorial College, Sullia.</li>
+        </ul>
+    </div>
+
+    <!-- Right Column: Experience -->
+    <div class="right-col">
+        <h3>Experience</h3>
+        <ul>
+            <li>
+                <strong>Software Industry:</strong>
+                <ul>
+                    <li>EDat Solutions Pvt Ltd, Thiruvananthapuram (Sept 2006 to Sept 2007)</li>
+                    <li><em>Role:</em> Programmer</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Teaching:</strong>
+                <ul>
+                    <li>Christ Nagar Hr. Sec. School, Trivandrum <br><em>Role:</em> Teacher</li>
+                    <li>Lourdes Matha College of Science and Technology, Trivandrum <br><em>Role:</em> Assistant Professor</li>
+                    <li>LaChatelaine Residential Junior College, Chennai <br><em>Role:</em> Teacher</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
