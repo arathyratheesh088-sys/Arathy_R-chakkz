@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOD</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: SlateGrey;
+        color: White;
+        font-family: Arial, sans-serif;
+        padding: 80px 20px 20px 20px; /* Leaves room for the fixed navbar */
+        text-align: center;
+        height: 100vh;
+        overflow: hidden; /* Prevents scrolling */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Fixed Navigation Bar at the top */
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: SlateGrey;
+        padding: 15px 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+        border-radius: 5px;
+        padding: 8px 16px;
+        border: none;
+        background-color: Teal;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: DarkCyan;
+    }
+
+    .btn a {
+        text-decoration: none;
+        color: White;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    h1 {
+        color: LightCyan;
+        margin: 0 0 10px 0;
+        font-size: 24px;
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    /* Card settings matching the previously updated scale dimensions */
+    .profile-card {
+        background-color: LightSlateGrey;
+        border-radius: 15px;
+        padding: 20px 35px; 
+        width: 100%;
+        max-width: 950px; 
+        margin: 0 auto;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px; 
+    }
+
+    .profile-header {
+        grid-column: span 2;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .profile-img {
+        width: 145px; /* Matched to your requested size */
+        height: auto;
+        border: 4px solid Teal;
+        border-radius: 50%; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        margin-bottom: 8px;
+    }
+
+    .profile-name {
+        color: LightCyan;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    h2 {
+        color: LightCyan;
+        margin: 10px 0 5px 0; 
+        font-size: 18px;
+        border-bottom: 2px solid Teal;
+        padding-bottom: 3px;
+    }
+
+    ul, ol {
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 13px; /* Balanced lower tracking size for the heavy text density */
+        line-height: 1.4; 
+        margin-bottom: 6px;
+        color: White;
+    }
+
+    li ul {
+        margin-top: 4px;
+        padding-left: 15px;
+    }
+
+    li ul li {
+        font-size: 12px;
+        list-style-type: disc;
+        color: LightCyan;
+        margin-bottom: 2px;
+    }
+
+    .left-col, .right-col {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar (Fixed) -->
+<div class="nav-container">
+    <button class="btn"><a href="Website.html">Home</a></button>
+    <button class="btn"><a href="fac.html">Faculty Details</a></button>
+    <button class="btn"><a href="#hod">HOD</a></button>
+    <button class="btn"><a href="mca-asso.html">MCA Association</a></button>
+    <button class="btn"><a href="gallery.html">Gallery</a></button>
+</div>
+
+<!-- Profile Content Wrapper -->
+<div class="profile-card">
+    <h1>HOD of MCA</h1>
+    
+    <div class="profile-header">
+        <img src="image/hod.jpg" alt="Sreeja.K" class="profile-img">
+        <div class="profile-name">Name: Sreeja.K</div>
+    </div>
+
+    <!-- Left Column: Responsibilities -->
+    <div class="left-col">
+        <h2>Responsibilities</h2>
+        <ul>
+            <li>Working as the Placement officer and spearheading the industry–institute interactions.</li>
+            <li>Working as the KTU coordinator for the college.</li>
+            <li>Handled AI, cyber forensic, Cryptography, machine learning topics in Post-graduation class and guiding many projects.</li>
+            <li>Certified ISO internal auditor</li>
+        </ul>
+    </div>
+
+    <!-- Right Column: Experience -->
+    <div class="right-col">
+        <h2>Experience</h2>
+        <ol>
+            <li>
+                Worked as system analyst in Mohandas College of Engineering & Technology from June 2003 onwards.
+                <ul>
+                    <li>Heads the design and implementation of Campus network and computer labs with more than 600 systems spread across 35 acre campus.</li>
+                </ul>
+            </li>
+            <li>
+                Worked as system analyst in the State Project Director’s Office, DPEP, Trivandrum as head of state MIS Head.
+                <ul>
+                    <li>Involved in Planning, Budget preparation, Monitoring and analysis of key variables and data.</li>
+                    <li>Member of the National Implementation Team of – DISE.</li>
+                    <li>Member of the State Project Appraisal Team.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>
