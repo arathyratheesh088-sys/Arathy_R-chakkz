@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Faculty Profile</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: SlateGrey;
+        color: White;
+        font-family: Arial, sans-serif;
+        padding: 80px 20px 20px 20px; /* Leaves room for the fixed navbar */
+        text-align: center;
+        height: 100vh;
+        overflow: hidden; /* Prevents scrolling */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Fixed Navigation Bar at the top */
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: SlateGrey;
+        padding: 15px 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+        border-radius: 5px;
+        padding: 8px 16px;
+        border: none;
+        background-color: Teal;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: DarkCyan;
+    }
+
+    .btn a {
+        text-decoration: none;
+        color: White;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    /* Card settings to take up more vertical page space balanced with the 950px width */
+    .profile-card {
+        background-color: LightSlateGrey;
+        border-radius: 15px;
+        padding: 30px 40px; /* Increased internal padding */
+        width: 100%;
+        max-width: 950px; 
+        margin: 0 auto;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 30px; /* Increased gap between columns */
+    }
+
+    .profile-header {
+        grid-column: span 2;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .profile-title {
+        color: LightCyan;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }
+
+    .profile-img {
+        width: 145px; /* Increased photo size */
+        height: auto;
+        border: 4px solid Teal;
+        border-radius: 50%; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        margin-bottom: 10px;
+    }
+
+    .profile-name {
+        color: White;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    h3 {
+        color: LightCyan;
+        margin: 15px 0 10px 0; /* Slightly larger margins */
+        font-size: 20px;
+        border-bottom: 2px solid Teal;
+        padding-bottom: 5px;
+    }
+
+    .meta-details {
+        font-style: normal;
+        line-height: 1.7; /* More generous line height to fill page */
+        font-size: 15px;
+    }
+
+    .meta-details strong {
+        color: LightCyan;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        font-size: 15px;
+        line-height: 1.6; /* Increased tracking height */
+        margin-bottom: 10px;
+        color: White;
+        list-style-type: square;
+    }
+
+    .left-col, .right-col {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar (Fixed) -->
+<div class="nav-container">
+    <button class="btn"><a href="Website.html">Home</a></button>
+    <button class="btn"><a href="fac.html">Faculty Details</a></button>
+    <button class="btn"><a href="hod.html">HOD</a></button>
+    <button class="btn"><a href="mca-asso.html">MCA Association</a></button>
+    <button class="btn"><a href="gallery.html">Gallery</a></button>
+</div>
+
+<!-- Profile Card Deck -->
+<div class="profile-card">
+    
+    <div class="profile-header">
+        <h2 class="profile-title">Assistant Professor</h2>
+        <img src="image/tr2.jpg" alt="Rekha M. Pillai" class="profile-img">
+        <div class="profile-name">Rekha M. Pillai</div>
+    </div>
+    
+    <!-- Left Column: About & Academic Qualifications -->
+    <div class="left-col">
+        <h3>About</h3>
+        <div class="meta-details">
+            <strong>Designation:</strong> Assistant Professor<br>
+            <strong>Department:</strong> Department of MCA<br>
+            <strong>Phone Number:</strong> 9447908831<br>
+            <strong>Mail-id:</strong> rekampillai@gmail.com<br>
+            <strong>KTU-ID:</strong> KTU-F14941
+        </div>
+
+        <h3>Academic Qualifications</h3>
+        <ul>
+            <li><strong>MCA:</strong> From University of Rajasthan.</li>
+            <li><strong>B.Sc. Chemistry:</strong> From University of Kerala.</li>
+        </ul>
+    </div>
+
+    <!-- Right Column: Experience -->
+    <div class="right-col">
+        <h3>Experience</h3>
+        <ul>
+            <li><strong>1 year:</strong> As System Analyst in IHRD Polytechnic, Karunagapally.</li>
+            <li><strong>16 and a half years:</strong> Teaching experience as Assistant Professor in Mohandas College of Engineering and Technology.</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
