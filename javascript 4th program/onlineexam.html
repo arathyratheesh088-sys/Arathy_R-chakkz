@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Online Exam</title>
+</head>
+<body>
+  <h2>Simple Online Exam</h2>
+  <p>Time Left: <span id="timer">60</span> seconds</p>
+  <form id="examForm">
+    <p>1. What is 5 + 3?</p>
+    <input type="radio" name="q1" value="6"> 6 <br>
+    <input type="radio" name="q1" value="8"> 8 <br>
+    <input type="radio" name="q1" value="10"> 10 <br>
+    <p>2. Which language runs in a web browser?</p>
+    <input type="radio" name="q2" value="Python"> Python <br>
+    <input type="radio" name="q2" value="JavaScript"> JavaScript <br>
+    <input type="radio" name="q2" value="C++"> C++ <br>
+    <br>
+    <button type="button" onclick="checkAnswers()">Submit Exam</button>
+  </form>
+  <h3 id="result"></h3>
+  <script>
+    let time = 60;
+    let countdown = setInterval(function() {
+      time--;
+      document.getElementById("timer").innerText = time;
+      if (time <= 0) {
+        checkAnswers(); 
+      }
+    }, 1000);
+    function checkAnswers() {
+      clearInterval(countdown); 
+      let score = 0;
+      let ans1 = document.querySelector('input[name="q1"]:checked');
+      let ans2 = document.querySelector('input[name="q2"]:checked');
+      if (ans1 && ans1.value === "8") {
+        score++;
+      }
+      if (ans2 && ans2.value === "JavaScript") {
+        score++;
+      }
+      document.getElementById("result").innerText = "Your Score: " + score + " / 2";
+    }
+  </script>
+</body>
+</html>
